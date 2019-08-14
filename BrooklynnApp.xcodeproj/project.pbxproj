@@ -107,8 +107,8 @@
 				11E0CA1C22FBB6F3007BF5D5 /* ShineButton.swift */,
 				11E0CA1E22FBB998007BF5D5 /* ShineParams.swift */,
 				11E0CA2C22FBC3FB007BF5D5 /* ShineLayer.swift */,
-				11CE205722FFB696004BAF2B /* ShineClickLayer.swift */,
 				11CE205922FFC67C004BAF2B /* ShineAngleLayer.swift */,
+				11CE205722FFB696004BAF2B /* ShineClickLayer.swift */,
 			);
 			path = BrooklynnApp;
 			sourceTree = "<group>";

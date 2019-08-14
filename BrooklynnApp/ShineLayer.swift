@@ -10,7 +10,7 @@ import UIKit
 
 class ShineLayer: CALayer, CAAnimationDelegate {
     
-    let shapeLayer = CAShapeLayer()
+    let shapeLayer =  CAShapeLayer()
     
     var fillColor: UIColor = UIColor(rgb: (255, 102, 102)) {
         willSet {
@@ -19,15 +19,17 @@ class ShineLayer: CALayer, CAAnimationDelegate {
     }
     
     var params: ShineParams = ShineParams()
-    var displayLink: CADisplayLink?
-    var endAnim: (() -> Void)?
+    
+    var displaylink: CADisplayLink?
+    
+    var endAnim: (()->Void)?
     
     func startAnim() {
         let anim = CAKeyframeAnimation(keyPath: "path")
         anim.duration = params.animDuration * 0.1
         let size = frame.size
-        let fromPath = UIBezierPath(arcCenter: CGPoint(x: size.width/2, y: size.height/2), radius: 1, startAngle: 0, endAngle: CGFloat(Double.pi) * 2.0, clockwise: false).cgPath
-        let toPath = UIBezierPath(arcCenter: CGPoint(x: size.width/2, y: size.height/2), radius: size.width/2 * CGFloat(params.shineDistanceMultiple), startAngle: 0, endAngle: CGFloat(Double.pi) * 2.0, clockwise: false).cgPath
+        let fromPath = UIBezierPath(arcCenter: CGPoint.init(x: size.width/2, y: size.height/2), radius: 1, startAngle: 0, endAngle: CGFloat(Double.pi) * 2.0, clockwise: false).cgPath
+        let toPath = UIBezierPath(arcCenter: CGPoint.init(x: size.width/2, y: size.height/2), radius: size.width/2 * CGFloat(params.shineDistanceMultiple), startAngle: 0, endAngle: CGFloat(Double.pi) * 2.0, clockwise: false).cgPath
         anim.delegate = self
         anim.values = [fromPath, toPath]
         anim.timingFunctions = [CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)]
@@ -39,6 +41,7 @@ class ShineLayer: CALayer, CAAnimationDelegate {
         }
     }
     
+    
     override init() {
         super.init()
         initLayers()
@@ -49,10 +52,11 @@ class ShineLayer: CALayer, CAAnimationDelegate {
         initLayers()
     }
     
-    required init?(coder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: Privater Methods
     private func initLayers() {
         shapeLayer.fillColor = UIColor.white.cgColor
         shapeLayer.strokeColor = fillColor.cgColor
@@ -61,13 +65,13 @@ class ShineLayer: CALayer, CAAnimationDelegate {
     }
     
     private func startFlash() {
-        displayLink = CADisplayLink(target: self, selector: #selector(flashAction))
+        displaylink = CADisplayLink(target: self, selector: #selector(flashAction))
         if #available(iOS 10.0, *) {
-            displayLink?.preferredFramesPerSecond = 6
-        } else {
-            displayLink?.frameInterval = 10
+            displaylink?.preferredFramesPerSecond = 6
+        }else {
+            displaylink?.frameInterval = 10
         }
-        displayLink?.add(to: .current, forMode: .common)
+        displaylink?.add(to: .current, forMode: .common)
     }
     
     @objc private func flashAction() {
@@ -77,8 +81,8 @@ class ShineLayer: CALayer, CAAnimationDelegate {
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag {
-            displayLink?.invalidate()
-            displayLink = nil
+            displaylink?.invalidate()
+            displaylink = nil
             shapeLayer.removeAllAnimations()
             let angleLayer = ShineAngleLayer(frame: bounds, params: params)
             addSublayer(angleLayer)

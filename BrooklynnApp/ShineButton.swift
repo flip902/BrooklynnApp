@@ -13,7 +13,8 @@ public class ShineButton: UIControl {
     
     public var params: ShineParams {
         didSet {
-            shineLayer.params = params
+            clickLayer.animDuration = params.animDuration/3
+            shineLayer.params       = params
         }
     }
     
@@ -43,6 +44,7 @@ public class ShineButton: UIControl {
     }
     
     private var clickLayer = ShineClickLayer()
+    
     private var shineLayer = ShineLayer()
     
     public init(frame: CGRect, params: ShineParams) {
@@ -57,16 +59,17 @@ public class ShineButton: UIControl {
         initLayers()
     }
     
-    required public init?(coder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         params = ShineParams()
-        super.init(coder: coder)
+        super.init(coder: aDecoder)
         layoutIfNeeded()
         initLayers()
-        
     }
     
     public func setClicked(_ clicked: Bool, animated: Bool = true) {
-        guard clicked != clickLayer.clicked else { return }
+        guard clicked != clickLayer.clicked else {
+            return
+        }
         if clicked {
             shineLayer.endAnim = { [weak self] in
                 self?.clickLayer.clicked = clicked
@@ -96,7 +99,7 @@ public class ShineButton: UIControl {
                 self?.sendActions(for: .valueChanged)
             }
             shineLayer.startAnim()
-        } else {
+        }else {
             clickLayer.clicked = !clickLayer.clicked
             isSelected = clickLayer.clicked
             sendActions(for: .valueChanged)
