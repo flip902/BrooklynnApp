@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BSAdditions",
+        "repositoryURL": "https://github.com/flip902/BSAdditions",
+        "state": {
+          "branch": "master",
+          "revision": "037cb3e10397ca8ae9ce8b6b54890d5631538ea1",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

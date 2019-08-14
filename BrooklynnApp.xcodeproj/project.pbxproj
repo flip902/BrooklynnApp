@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113E7ED22303A10800CF6DF7 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E7ED12303A10800CF6DF7 /* CalculatorButton.swift */; };
 		117F36E222EA946B00CFD9B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F36E122EA946B00CFD9B3 /* AppDelegate.swift */; };
 		117F36E422EA946B00CFD9B3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 117F36E322EA946B00CFD9B3 /* art.scnassets */; };
 		117F36E622EA946B00CFD9B3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F36E522EA946B00CFD9B3 /* GameViewController.swift */; };
@@ -14,6 +15,13 @@
 		117F36EB22EA946D00CFD9B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117F36EA22EA946D00CFD9B3 /* Assets.xcassets */; };
 		117F36EE22EA946D00CFD9B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117F36EC22EA946D00CFD9B3 /* LaunchScreen.storyboard */; };
 		117F36F922EA946E00CFD9B3 /* BrooklynnAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F36F822EA946E00CFD9B3 /* BrooklynnAppTests.swift */; };
+		117F370422EA949E00CFD9B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F370322EA949E00CFD9B3 /* MainViewController.swift */; };
+		117F370A22EAA25300CFD9B3 /* BSAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = 117F370922EAA25300CFD9B3 /* BSAdditions */; };
+		11CE205822FFB696004BAF2B /* ShineClickLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE205722FFB696004BAF2B /* ShineClickLayer.swift */; };
+		11CE205A22FFC67C004BAF2B /* ShineAngleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CE205922FFC67C004BAF2B /* ShineAngleLayer.swift */; };
+		11E0CA1D22FBB6F3007BF5D5 /* ShineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E0CA1C22FBB6F3007BF5D5 /* ShineButton.swift */; };
+		11E0CA1F22FBB998007BF5D5 /* ShineParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E0CA1E22FBB998007BF5D5 /* ShineParams.swift */; };
+		11E0CA2D22FBC3FB007BF5D5 /* ShineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E0CA2C22FBC3FB007BF5D5 /* ShineLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		113E7ED12303A10800CF6DF7 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		117F36DE22EA946B00CFD9B3 /* BrooklynnApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrooklynnApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117F36E122EA946B00CFD9B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117F36E322EA946B00CFD9B3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -38,6 +47,12 @@
 		117F36F422EA946E00CFD9B3 /* BrooklynnAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrooklynnAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		117F36F822EA946E00CFD9B3 /* BrooklynnAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrooklynnAppTests.swift; sourceTree = "<group>"; };
 		117F36FA22EA946E00CFD9B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		117F370322EA949E00CFD9B3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		11CE205722FFB696004BAF2B /* ShineClickLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineClickLayer.swift; sourceTree = "<group>"; };
+		11CE205922FFC67C004BAF2B /* ShineAngleLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineAngleLayer.swift; sourceTree = "<group>"; };
+		11E0CA1C22FBB6F3007BF5D5 /* ShineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineButton.swift; sourceTree = "<group>"; };
+		11E0CA1E22FBB998007BF5D5 /* ShineParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineParams.swift; sourceTree = "<group>"; };
+		11E0CA2C22FBC3FB007BF5D5 /* ShineLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117F370A22EAA25300CFD9B3 /* BSAdditions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +96,19 @@
 			isa = PBXGroup;
 			children = (
 				117F36E122EA946B00CFD9B3 /* AppDelegate.swift */,
-				117F36E322EA946B00CFD9B3 /* art.scnassets */,
+				117F370322EA949E00CFD9B3 /* MainViewController.swift */,
 				117F36E522EA946B00CFD9B3 /* GameViewController.swift */,
+				117F36E322EA946B00CFD9B3 /* art.scnassets */,
 				117F36E722EA946B00CFD9B3 /* Main.storyboard */,
-				117F36EA22EA946D00CFD9B3 /* Assets.xcassets */,
 				117F36EC22EA946D00CFD9B3 /* LaunchScreen.storyboard */,
 				117F36EF22EA946D00CFD9B3 /* Info.plist */,
+				113E7ED12303A10800CF6DF7 /* CalculatorButton.swift */,
+				117F36EA22EA946D00CFD9B3 /* Assets.xcassets */,
+				11E0CA1C22FBB6F3007BF5D5 /* ShineButton.swift */,
+				11E0CA1E22FBB998007BF5D5 /* ShineParams.swift */,
+				11E0CA2C22FBC3FB007BF5D5 /* ShineLayer.swift */,
+				11CE205722FFB696004BAF2B /* ShineClickLayer.swift */,
+				11CE205922FFC67C004BAF2B /* ShineAngleLayer.swift */,
 			);
 			path = BrooklynnApp;
 			sourceTree = "<group>";
@@ -115,6 +138,9 @@
 			dependencies = (
 			);
 			name = BrooklynnApp;
+			packageProductDependencies = (
+				117F370922EAA25300CFD9B3 /* BSAdditions */,
+			);
 			productName = BrooklynnApp;
 			productReference = 117F36DE22EA946B00CFD9B3 /* BrooklynnApp.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +191,9 @@
 				Base,
 			);
 			mainGroup = 117F36D522EA946B00CFD9B3;
+			packageReferences = (
+				117F370822EAA25300CFD9B3 /* XCRemoteSwiftPackageReference "BSAdditions" */,
+			);
 			productRefGroup = 117F36DF22EA946B00CFD9B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,8 +230,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117F370422EA949E00CFD9B3 /* MainViewController.swift in Sources */,
+				113E7ED22303A10800CF6DF7 /* CalculatorButton.swift in Sources */,
+				11E0CA2D22FBC3FB007BF5D5 /* ShineLayer.swift in Sources */,
 				117F36E622EA946B00CFD9B3 /* GameViewController.swift in Sources */,
+				11CE205A22FFC67C004BAF2B /* ShineAngleLayer.swift in Sources */,
 				117F36E222EA946B00CFD9B3 /* AppDelegate.swift in Sources */,
+				11E0CA1D22FBB6F3007BF5D5 /* ShineButton.swift in Sources */,
+				11CE205822FFB696004BAF2B /* ShineClickLayer.swift in Sources */,
+				11E0CA1F22FBB998007BF5D5 /* ShineParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		117F370822EAA25300CFD9B3 /* XCRemoteSwiftPackageReference "BSAdditions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/flip902/BSAdditions";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		117F370922EAA25300CFD9B3 /* BSAdditions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 117F370822EAA25300CFD9B3 /* XCRemoteSwiftPackageReference "BSAdditions" */;
+			productName = BSAdditions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 117F36D622EA946B00CFD9B3 /* Project object */;
 }

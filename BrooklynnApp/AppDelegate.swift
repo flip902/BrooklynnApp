@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        // TODO: may need to wrap in a navigationController#warning("embed in a navigation controller")
+        window?.rootViewController = MainViewController()
+        
+        //setRootViewController(MainViewController(), animated: true)
         return true
     }
 
@@ -41,6 +47,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // Smoother transition to first screen
+    
+    /*
+     private func setRootViewController(_ rootViewController: UIViewController, animated: Bool) {
+     guard let window = window else { return }
+     guard window.rootViewController != nil && animated else {
+     window.rootViewController = rootViewController
+     return
+     }
+     
+     let snapshot = window.screen.snapshotView(afterScreenUpdates: true)
+     window.addSubview(snapshot)
+     window.rootViewController = rootViewController
+     let animations = { snapshot.removeFromSuperview() }
+     UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: animations, completion: nil)
+     }
+     */
 }
 
